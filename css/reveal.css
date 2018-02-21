@@ -144,22 +144,22 @@ body {
   visibility: inherit; }
 
 .reveal .slides section .fragment.highlight-red.visible {
-  color: #ff2c2d; }
+  color: #EF4035; }
 
 .reveal .slides section .fragment.highlight-green.visible {
-  color: #17ff2e; }
+  color: #6EB43F; }
 
 .reveal .slides section .fragment.highlight-blue.visible {
-  color: #1b91ff; }
+  color: #89CCE2; }
 
 .reveal .slides section .fragment.highlight-current-red.current-fragment {
-  color: #ff2c2d; }
+  color: #EF4035; }
 
 .reveal .slides section .fragment.highlight-current-green.current-fragment {
-  color: #17ff2e; }
+  color: #6EB43F; }
 
 .reveal .slides section .fragment.highlight-current-blue.current-fragment {
-  color: #1b91ff; }
+  color: #89CCE2; }
 
 /*********************************************
  * DEFAULT ELEMENT STYLES

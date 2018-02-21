@@ -9,13 +9,13 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background-color: #B31B1B; }
+  background-color: #fff; }
 
 .reveal {
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   font-weight: 300;
-  color: #fff; }
+  color: #333; }
 
 ::selection {
   color: #fff;
@@ -42,16 +42,17 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
+  color: #B31B1B;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: normal;
   text-shadow: none;
+  text-align: left;
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.11em; }
+  font-size: 2.11em; text-align: center;}
 
 .reveal h2 {
   font-size: 1.55em; }
@@ -64,7 +65,10 @@ body {
  *********************************************/
 .reveal p {
   margin: 20px 0;
-  line-height: 1.3; }
+  line-height: 1.3;
+  text-align: left;
+  font-size: 87.5%
+}
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
@@ -83,6 +87,8 @@ body {
 .reveal ol,
 .reveal dl,
 .reveal ul {
+  width: 100%;
+  font-size: 87.5%;
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em; }
@@ -115,12 +121,20 @@ body {
 .reveal blockquote {
   display: block;
   position: relative;
-  width: 70%;
+  width: 75%;
   margin: 20px auto;
   padding: 5px;
-  font-style: italic;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+  font-style: italic;}
+
+.reveal blockquote:before {
+  content: '“';
+  color: #F8981D;
+}
+
+.reveal blockquote:after {
+  content: '”';
+  color: #F8981D;
+}
 
 .reveal blockquote p:first-child,
 .reveal blockquote p:last-child {
@@ -132,7 +146,7 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
@@ -142,6 +156,10 @@ body {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
 .reveal code {
+  background-color: #222;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 4px;
   font-family: monospace;
   text-transform: none; }
 
@@ -197,16 +215,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #8b743d;
+  color: #F8981D;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #c0a86e;
+  color: #D8770E;
   text-shadow: none;
   border: none; }
+
+.reveal a:visited {
+  color: #D8770E;
+}
 
 .reveal .roll span:after {
   color: #fff;
@@ -217,9 +239,9 @@ body {
  *********************************************/
 .reveal section img {
   margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  background: transparent;
+  border: none;
+  box-shadow: none; }
 
 .reveal section img.plain {
   border: 0;
@@ -246,9 +268,20 @@ body {
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #fff; }
+  color: #B31B1B; }
 
 .reveal .progress span {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * UTILITIES
+ *********************************************/
+
+ .has-text-align-center {
+   text-align: center !important;
+ }
+ .has-text-align-left {
+   text-align: left !important;
+ }
