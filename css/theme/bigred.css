@@ -286,3 +286,8 @@ body {
  .has-text-align-left {
    text-align: left !important;
  }
+
+ .halfblock {
+   width: 50%;
+   float: left;
+ }

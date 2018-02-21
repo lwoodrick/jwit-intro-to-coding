@@ -25,7 +25,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section> <!-- Additional Slide for WiFi Information (When Needed) -->
-					<h2>To follow along on your laptop, visit <strong>https://lwoodrick.github.io/jwit-intro-to-coding</strong></h2>
+					<h3>To follow along on your laptop, visit <strong>http://bit.ly/2Fkah4y</strong></h3>
 				</section>
 
 				<section> <!-- Opening -->
@@ -136,7 +136,7 @@
 					<h2 class="has-text-align-center">Computation: The Early Years</h2>
 
 					<img src="img/slide-images/colossus.png" style="height: 60vh" alt="Photo of two programmers next to the Colossus at Bletchley Park" />
-					<p class="has-text-align-center"><small><i>Programmers working with the Colossus, a Nat-zee code-breakin'<br> machine and one of the first digital computers.</i></small></p>
+					<p class="has-text-align-center"><small><i>Programmers working with the Colossus, a Nazi code-breakin'<br> machine and one of the first digital computers.</i></small></p>
 
 					<aside class="notes">
 						... the device, however, was just as large.
@@ -477,19 +477,23 @@ STOP RUN.</code></pre>
 					</p>
 				</section>
 
+
+				<section><!-- Introducing Snackbot -->
+					<h2>Let's Ruby: Snackbot</h2>
+					<p>As we pick up concepts, we'll be using them to create a program to run Snackbot, a snack subscription service robot.</p>
+					<p>To get a blank workspace started, hop onto <a href="https://repl.it/languages/ruby" target="_blank">repl.it</a>.</p>
+				</section>
+
 				<section>
 					<h2>Variables</h2>
 					<p>A <strong>variable</strong> is essentially a <strong>storage</strong> container for information,
 information that is, within the context of Ruby, an object.</p>
-					<p class="fragment">Variables can hold several different flavors of object, such as strings,
-					numbers, nil, arrays, hashes, and symbols, but here we'll be
-					covering <strong>numbers</strong>, <strong>strings</strong>, and <strong>booleans</strong>.</p>
 				</section>
 
 				<section> <!-- Variables -->
 					<h2>Variables</h2>
 
-            <p class="fragment">In Ruby, <strong>variables</strong> are assigned by specifying a name for the variable,
+            <p>In Ruby, <strong>variables</strong> are assigned by specifying a name for the variable,
 followed by an equals sign, and then including the value.</p>
 						<div class="fragment">
 								<p style="font-weight: bold; text-align: left;" class="green small">Examples:</p>
@@ -499,6 +503,11 @@ my_age = 28
 teaching_right_now = true</code></pre>
 						</div>
             <p class="fragment small" style="margin-top: 20px;">Variables come in several flavors, but here we'll be covering<br> <strong class="blue">Numbers</strong>, <strong class="blue">Strings</strong>, and <strong class="blue">Booleans</strong>.</p>
+						<aside class="notes">
+							Variables can hold several different flavors of object, such as strings,
+							numbers, nil, arrays, hashes, and symbols, but here we'll be
+							covering strings, numbers, and booleans.
+						</aside>
 				</section>
 
 				<section> <!-- Variables: Numbers -->
@@ -571,18 +580,17 @@ book_author = "Ryan North"</code></pre>
 
 				<section> <!-- Variables: Numbers as Strings -->
 					<h2>Variable Types: <br>Numbers as Strings</h2>
-					<p>You can store numbers as a string variables too!</p>
+					<p>You can store numbers as string variables too!</p>
 					<p>This is best used for numbers that aren't/shouldn't be used in mathematical
 					equations. Numbers can also become part of strings if directly added to them.</p>
 
-					<pre class="fragment"><code contenteditable class ="javascript">jennys_number = "8675309"</code></pre>
+					<pre><code contenteditable class ="ruby">beyonce_album_title = "4"
+beyonce_album_total = 6</code></pre>
 
 					<aside class="notes">
 						However, because it's kind of difficult to manipulate strings, it can
 						sometimes be a good idea to store numbers as string variables in order
-						to prevent them from being used in mathematical equations. If you
-						happened to be Tommy Tutone, you would probably store Jenny's number
-						as a string after insisting that she not change it.
+						to prevent them from being used in mathematical equations.
 					</aside>
 				</section>
 
@@ -606,8 +614,8 @@ book_author = "Ryan North"</code></pre>
 				<section> <!-- Variables: Booleans (cont.) -->
 					<h2>Variable Types: Booleans</h2>
 					<p class="copy--small box">Variables can also be used to store <strong class='blue'>TRUE</strong> or <strong class='blue'>FALSE</strong> as a value.</p>
-					<pre><code contenteditable class ="javascript">logged_in = false;
-prime_member = false;</code></pre>
+					<pre><code contenteditable class ="javascript">logged_in = false
+prime_member = false</code></pre>
 					<p>
 						You can define a condition, then use a Boolean to tell the computer whether that condition is true or false.
 					</p>
@@ -620,13 +628,13 @@ prime_member = false;</code></pre>
 				</section>
 
 				<section> <!-- Variables: Variables are mutable -->
-					<h2>Variable Ability #1</h2>
+					<h2>Variable Property #1</h2>
 					<p>The value of variables can be updated over the course of a program.</p>
 				</section>
 
 				<section> <!-- Variables: Variables are mutable (example) -->
 					<div>
-						<h2 class="has-text-align-center">Variable Ability #1</h2>
+						<h2 class="has-text-align-center">Variable Property #1</h2>
 						<img src="img/slide-images/kittyvillage.jpg" alt="A picture of a cat sitting in a cluster of three boxes" />
 					</div>
 					<aside class="notes">
@@ -705,7 +713,7 @@ mid-line, it will (usually) turn itself and all text following into a comment to
 					<h2>Variable Property #2</h2>
 <iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Variable-Property-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 					<aside class="notes">
-						Now, variable ability number two — you can run calculations
+						Now, Variable Property number two — you can run calculations
 						with number variables as if they were numbers, but with basic operations,
 						strings can only be mashed together. And now, a demonstration.
 
@@ -723,13 +731,13 @@ mid-line, it will (usually) turn itself and all text following into a comment to
 				<section> <!-- Variables: Numbers can be manipulated like numbers, strings are complicated, illustrated -->
 					<h2 class="has-text-align-center">Variable Property #2</h2>
 					<div class="fragment" style="width: 50%; float:left;">
-						<img src="img/slide-images/thumbsup.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
+						<img style="height: 200px;" src="img/slide-images/thumbsup.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
 						<p class="small has-text-align-center">
 							<small><i>Computers on numbers.</i></small>
 						</p>
 					</div>
 					<div class="fragment" style="width: 50%; float:left;">
-						<img src="img/slide-images/tinagroan.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
+						<img style="height: 200px;" src="img/slide-images/tinagroan.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
 						<p class="small has-text-align-center">
 							<small><i>Computers on strings.</i></small>
 						</p>
@@ -778,6 +786,10 @@ manipulating them until you get your desired result.</p>
 					<h2>Methods</h2>
 					<p>The most basic methods are mathematical, but other useful, time-saving
 methods are baked into certain types of Ruby objects automatically.</p>
+				</section>
+
+				<section> <!-- Methods -->
+					<h2>Methods</h2>
 <p>These are called by declaring your object or the variable associated with
 it, followed by a period and the name of the method.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Methods-Part-1-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -815,8 +827,8 @@ puts sentence.length.class
 
 <section> <!-- Methods -->
 	<h2>Methods</h2>
-	<p>Oftentimes, you do need to write your methods from scratch — let’s pop over to repl.it to see how it’s done.</p>
-	<p><a href="https://repl.it/FyeZ/2">Methods, Part 2</a></p>
+	<p>Oftentimes, you do need to write your methods from scratch — let’s work through making one together.</p>
+	<iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Methods-Part-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 </section>
 
 <section> <!-- Methods -->
@@ -833,7 +845,7 @@ squarify(4)
 <section><!-- Interlude: Scope -->
 	<h2>Interlude: Scope</h2>
 	<p>In Ruby, variables are block-scoped, which means that if a variable isn’t defined inside of a block (in our case, a method we’ve made), it is considered undefined and we can’t retrieve or modify it.</p>
-	<p class="fragment">To give a <strong>local variable</strong> (a variable’s default mode) a “passport” and make it <strong>global</strong> (accessible across the application), we declare the variable outside of all blocks and start it off with a dollar sign (<strong>$</strong>)  <a href="https://repl.it/Fylj/4">(Scope)</a>
+	<p class="fragment">To give a <strong>local variable</strong> (a variable’s default mode) a “passport” and make it <strong>global</strong> (accessible across the application), we declare the variable outside of all blocks and start it off with a dollar sign (<strong>$</strong>)  <a href="https://repl.it/Fylj/4">(Scope Example)</a>
 </p>
 </section>
 
@@ -860,38 +872,37 @@ end</code></pre>
 
 <section><!-- Let's Try It All Together! -->
 	<h2>Let's Try It All Together!</h2>
-	<p>We’re going to pop back on over to repl.it for your first assignment!</p>
-	<p><a href="https://repl.it/FyoU/1">(Assignment #1: DoorBot)</a></p>
+	<p>We’re going to pop back over to repl.it for your first assignment!</p>
+	<p><a href="https://repl.it/@lauren_woodrick/Intro-to-Coding-Snackbot-Mark-1">(Snackbot Part #1)</a></p>
 </section>
 
 <section><!-- Let's Try It All Together! -->
 	<h2>Let's Try It All Together!</h2>
 	<p class="small">A possible solution:</p>
-	<pre><code contenteditable class ="ruby">$party_pop = 36
+	<pre><code contenteditable class ="ruby">puts "Hello! I am Snackbot!"
 
-def greet(name)
-  $party_pop = $party_pop + 1
-  puts "Hey, #{name}! How's it going?"
+$number_of_cupcakes = 71 # Number of cupcakes
+$cupcake_allowance = 1300
+$cupcake_price = 2.50
+
+$order_total = $number_of_cupcakes * $cupcake_price
+
+def place_cupcake_order
+  $cupcake_allowance = $cupcake_allowance - $order_total
+  return "#{$number_of_cupcakes} cupcakes were delivered, $#{$cupcake_allowance} remains in your account."
 end
 
-def bye(name)
-  $party_pop = $party_pop - 1
-  puts "Have a good night, #{name}!"
-end
-
-def party_count
-  puts "There are #{$party_pop.to_s”} people at the party!"
-end</code></pre>
+place_cupcake_order</code></pre>
 </section>
 
-<section data-background="img/slide-images/successkid.png"> <!-- Trapped in a Loop -->
+<section data-background="img/slide-images/successkid.png"> <!-- Success! -->
 </section>
 
 
 
 				<section> <!-- Logical Structures -->
 					<h2>Let's Talk To Computers: Logical Structures</h2>
-					<p>While pretty fun, DoorBot was a glorified tally counter and nametag maker. (Sorry, DoorBot)</p>
+					<p>While pretty fun, Snackbot was a glorified calculator. (Sorry, Snackbot)</p>
 					<p class="fragment">The real programming secret sauce begins with control flow &mdash; logical structures that provide the basis for manipulating data in a more intelligent way.</p>
 				</section>
 
@@ -1001,58 +1012,37 @@ end</code></pre>
 
 				<section> <!-- Let's Try If/Else Statements -->
 					<h2>Logical Structures:<br>If/Else Statements</h2>
-          <p>We're going to pop over to <a href="https://repl.it/CXlG" target="_blank">repl.it</a>.</p>
+          <p>We're going to pop over to repl.it.</p>
 					<p><a href="https://repl.it/CXlG/2">(If/Else Statements)</a></p>
 				</section>
 
 				<section> <!-- If/Else Statements -->
 					<h2>Logical Structures:<br>If/Else Statements</h2>
 					<p>If only an <strong>if</strong> statement is included, the code will only execute if the specified <strong>argument</strong> returns <strong>true</strong>.</p>
-					<pre><code contenteditable class ="ruby">cart_total = 8
+					<pre><code contenteditable class ="ruby">puts "Hello! I am Snackbot!"
 
-if cart_total > 2
-  puts "You get free shipping!"
+. . .
+place_cupcake_order
+
+if $order_total > $cupcake_allowance
+  puts "No more cupcakes for you!"
 end</code></pre>
 				</section>
 
 				<section> <!-- If/Else Statements -->
 					<h2>Logical Structures:<br>If/Else Statements</h2>
 					<p>If you want to include a fallback that will execute if the previous condition fails, you include an <strong>else</strong> statement <strong>after your if code</strong> and before the end.</p>
-					<pre><code contenteditable class ="ruby">cart_total = 8
+					<pre><code contenteditable class ="ruby">puts "Hello! I am Snackbot!"
+. . .
+place_cupcake_order
 
-if cart_total > 2
-  puts "You get free shipping!"
+if $order_total > $cupcake_allowance
+	puts "No more cupcakes for you!"
 else
-  puts "Sorry, buddy, gotta pay for shipping…"
+	puts "Thank you for your cupcake order!"
 end</code></pre>
 				</section>
 
-				<section> <!-- Try an If/Else Statement Yourself! -->
-					<h2>Try an If/Else Statement Yourself!</h2>
-					<p>Augment the code for the terrible Oreo calamity to provide extra color and drama.</p>
-					<p><a href="https://repl.it/Fysx/1">(If/Else Yourself!)</a></p>
-				</section>
-
-				<section> <!-- Try an If/Else Statement Yourself! -->
-					<h2 class="has-text-align-center">Try an If/Else Statement Yourself!</h2>
-					<pre><code contenteditable class ="ruby">$oreos_in_box = 6
-
-def eat_oreo
-$oreos_in_box = $oreos_in_box – 1
- if $oreos_in_box == 0
-    puts  "Oh geez, I can't believe it happened to the entire box."
-  elsif $oreos_in_box < 0
-    puts  "There are no more oreos..."
-  else
-    puts “Oh no, I slipped and an Oreo fell into my mouth!”
-  end
-end
-
-def how_many_oreos_left
-  puts $oreos_in_box
-end
-</code></pre>
-				</section>
 
 				<section> <!-- Bad Joke Break -->
 					<h1>And now, a break for one of those programming jokes...</h1>
@@ -1071,7 +1061,6 @@ end
 					<h2>Loops</h2>
 					<p>A loop is a <strong class="blue">set of instructions that repeats</strong><br/>until a certain condition is reached.</p>
 					<p class="fragment">The type of loop we'll be writing next is a <b class="blue">while loop</b>.</p>
-					<p><a href="https://repl.it/Fysw/2">(Loops)</a></p>
 					<aside class="notes">
 						(Read Slide) ... but we'll only be touching on while loops in this class.
 					</aside>
@@ -1194,10 +1183,10 @@ puts “Out of papers! Go home!”</code></pre>
 					<h2>Using What We've Learned</h2>
 					<p>
 						We've run through <strong class="blue">Variables,</strong> <strong>Methods</strong>, <strong class="blue">If/Else Statements</strong>,
-						and <strong class="blue">Loops</strong>... now let's try to bring them all together!
+						and <strong class="blue">Loops</strong>... now let's keep building using them all!
 					</p>
 					<p>
-						<strong class="blue">Our Brief: </strong> Fashion a program for a cupcake-delivering robot.
+						<strong class="blue">Our Brief: </strong> Fashion a more complete program for our cupcake-delivering robot.
 					</p>
 				</section>
 
