@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Intro to Coding</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/bigred.css">
@@ -25,8 +25,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section> <!-- Additional Slide for WiFi Information (When Needed) -->
-					<h1>Network: [Enter Network Here]</h1>
-					<h1>Password: [Enter Password Here]</h1>
+					<h2>To follow along on your laptop, visit <strong>https://lwoodrick.github.io/jwit-intro-to-coding</strong></h2>
 				</section>
 
 				<section> <!-- Opening -->
@@ -116,17 +115,6 @@
 					<p class="has-text-align-center">
 						<i><small>Examples of some early analog calculators.</small></i>
 					</p>
-
-					<aside class="notes">
-						People have been using tools with varying levels of complexity to make math
-						easier for years, from abacuses for basic math to slide rules for trigonometry
-						for logorithms. However, these technologies only went so far in that they had singular
-						purposes and their scope was limited by the space they occupied, and as the Industrial
-						Revolution kicked up and global trade started to expand, it became more imperative
-						to get engineers and navigators the appropriate tables of equations so they could
-						do their jobs well. These were difficult to reproduce accurately, and folks were
-						feeling the pain. In classic infomercial style, THERE HAS TO BE A BETTER A BETTER WAY.
-					</aside>
 				</section>
 
 				<section> <!-- Computation: The Early Years: The Struggle of Science -->
@@ -136,26 +124,12 @@
 					<p class="has-text-align-center">
 						<i><small>A difference engine built out.</small></i>
 					</p>
-
-					<aside class="notes">
-						However, as far as the British government was concerned, human error still reigned
-						in this case, as the Difference Engine ended up being trapped in development hell — the
-						engine he concepted was too spendy and too complicated to produce at that time and wouldn't
-						actually be built out until 1989 when it was basically done for fun by the London Science Museum
-						Also to their chagrin, Babbage had gotten distracted by another project in 1837 –
-						an analytical engine that could be used more broadly, had "memory", and could grapple with
-						loops and conditional branching.
-					</aside>
 				</section>
 
 				<section> <!-- Computation: The Early Years: The First Programmer-->
 					<h2 class="has-text-align-center">Computation: The Early Years</h2>
 					<img style="max-height: 65vh;" src="img/slide-images/adalovelace.jpg" alt="A portrait of Ada Lovelace." />
 					<p class="has-text-align-center"><small><i>Our Lady of Conceptual Programming, <strong class="blue">Ada Lovelace</strong></i></small></p>
-
-					<aside class="notes">
-						Said programmer was Ada Lovelace.
-					</aside>
 				</section>
 
 				<section> <!-- Computation: The Early Years: How Computers Turned Out, Part 2 -->
@@ -376,16 +350,6 @@ STOP RUN.</code></pre>
 			 <!-- How Do Computers Do Their Thinking: RAM -->
 
 				 <section>
-					 <h2 class="has-text-align-center">How Computers Think: RAM</h2>
-					 <img style="max-height: 60vh;" class="fragment" src="img/slide-images/random-access-memories.jpg" alt="The cover of Daft Punk's Random Access Memories.">
-
-					 <aside class="notes">
-						 Random Access Memory — not to be confused with the excellent Daft Punk album of the
-						 same, but pluralized, name...
-					 </aside>
-				 </section>
-
-				 <section>
 					 <h2>How Computers Think: RAM</h2>
 					 <p>
 						 <strong class="blue">RAM</strong>, or <strong class="blue">Random Access Memory</strong>
@@ -438,6 +402,7 @@ STOP RUN.</code></pre>
 				 </section>
 
 			 <section> <!-- Matz on Ruby-->
+				 <img src="img/slide-images/ruby.jpeg" style="height: 22vh" alt="Ruby on Rails">
 				 <blockquote>I want to see Ruby help <br>every programmer in the world <br>to be productive, and to enjoy programming, and to be happy.</blockquote>
 				 <p class="has-text-align-center"><small>&mdash; Yukihiro "Matz" Matsumoto</small></p>
 
@@ -487,7 +452,7 @@ STOP RUN.</code></pre>
 					 For this course, we'll be making use of an online terminal named <a href="https://repl.it">repl.it</a>.
 				 </p>
 				 <p>As you get more into programming, you can use your computer’s own
-						terminal and a program like Atom and NotePad++ to build and run full
+						terminal and a program like <strong>Atom</strong> and <strong>NotePad++</strong> to build and run full
 						programs. But for now, repl.it is a great playground to start in.</p>
 
 				 <aside class="notes">
@@ -504,18 +469,19 @@ STOP RUN.</code></pre>
 
 				<section> <!-- Let's Ruby -->
 					<h2>Let's Ruby</h2>
-					We'll be covering
+					<p>We'll be covering
 						<strong class="fragment highlight-blue">Variables</strong>,
 						<strong class="fragment highlight-blue">Methods</strong>,
 						<strong class="fragment highlight-blue">Conditionals</strong>, and
 						<strong class="fragment highlight-blue">Loops</strong>!
+					</p>
 				</section>
 
 				<section>
 					<h2>Variables</h2>
 					<p>A <strong>variable</strong> is essentially a <strong>storage</strong> container for information,
 information that is, within the context of Ruby, an object.</p>
-					<p>Variables can hold several different flavors of object, such as strings,
+					<p class="fragment">Variables can hold several different flavors of object, such as strings,
 					numbers, nil, arrays, hashes, and symbols, but here we'll be
 					covering <strong>numbers</strong>, <strong>strings</strong>, and <strong>booleans</strong>.</p>
 				</section>
@@ -661,12 +627,17 @@ prime_member = false;</code></pre>
 				<section> <!-- Variables: Variables are mutable (example) -->
 					<div>
 						<h2 class="has-text-align-center">Variable Ability #1</h2>
-						<img src="img/slide-images/kittyvillage.jpg" alt="A picture of two cats fighting in a box." />
+						<img src="img/slide-images/kittyvillage.jpg" alt="A picture of a cat sitting in a cluster of three boxes" />
 					</div>
 					<aside class="notes">
 						Like we learned earlier, variables are storage containers... (advance
 						slide) ... much like this box is a container for cats. (advance slide)
 					</aside>
+				</section>
+
+				<section>
+					<h2>Variable Property #1</h2>
+					<iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Variable-Property-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 				</section>
 
 				<section> <!-- Variables: Variables are mutable (example) -->
@@ -675,9 +646,7 @@ prime_member = false;</code></pre>
 puts kitty_village_population
 kitty_village_population = 0
 puts kitty_village_population</code></pre>
-						<p class="right-align" style="padding-right: 50px;">
-							<a href="https://repl.it/CX3X" target="_blank">(repl.it)</a>
-						</p>
+
 					<aside class="notes">
 						If we were to take a census of Kitty Village, we might declare the variable
 						kittyVillagePopulation is declared and then assign it the value of 1.
@@ -728,14 +697,15 @@ mid-line, it will (usually) turn itself and all text following into a comment to
 
 				<section> <!-- Variables: Numbers can be manipulated like numbers, strings are complicated. -->
 					<h2>Variable Property #2</h2>
-					<p><strong class="blue">Number variables</strong> can be manipulated, <br>just like the numbers they represent.
+					<p><strong class="blue">Number variables</strong> can be manipulated, just like the numbers they represent.
 					<strong class="blue">String variables</strong>, however, can only be mashed together.</p>
+				</section>
 
-					<p class="right-align" style="padding-right: 50px;">
-						<a href="https://repl.it/CX4Z/1" target="_blank">(repl.it example)</a>
-					</p>
+				<section> <!-- Variables: Numbers can be manipulated like numbers, strings are complicated. -->
+					<h2>Variable Property #2</h2>
+<iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Variable-Property-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 					<aside class="notes">
-					 	Now, variable ability number two — you can run calculations
+						Now, variable ability number two — you can run calculations
 						with number variables as if they were numbers, but with basic operations,
 						strings can only be mashed together. And now, a demonstration.
 
@@ -752,16 +722,16 @@ mid-line, it will (usually) turn itself and all text following into a comment to
 
 				<section> <!-- Variables: Numbers can be manipulated like numbers, strings are complicated, illustrated -->
 					<h2 class="has-text-align-center">Variable Property #2</h2>
-					<div class="fragment">
-						<img style="width: 50%;" src="img/slide-images/thumbsup.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
+					<div class="fragment" style="width: 50%; float:left;">
+						<img src="img/slide-images/thumbsup.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
 						<p class="small has-text-align-center">
-							<i>Computers on numbers.</i>
+							<small><i>Computers on numbers.</i></small>
 						</p>
 					</div>
-					<div class="fragment">
-						<img style="width: 50%;" src="img/slide-images/tinagroan.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
+					<div class="fragment" style="width: 50%; float:left;">
+						<img src="img/slide-images/tinagroan.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
 						<p class="small has-text-align-center">
-							<i>Computers on strings.</i>
+							<small><i>Computers on strings.</i></small>
 						</p>
 					</div>
 					<aside class="notes">
@@ -810,7 +780,7 @@ manipulating them until you get your desired result.</p>
 methods are baked into certain types of Ruby objects automatically.</p>
 <p>These are called by declaring your object or the variable associated with
 it, followed by a period and the name of the method.</p>
-<p><a href="">(Methods, Part 1)</a></p>
+<iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Methods-Part-1-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 				</section>
 
 				<section> <!-- Methods -->

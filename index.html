@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Intro to Coding</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/bigred.css">
@@ -24,13 +24,1286 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>A Test Commit...</section>
-				<section>... to Test Deploy.</section>
-				<section><h1>Sample Codeblock</h1>
-					<pre><code>puts "Incredible!"</code></pre>
+				<section> <!-- Additional Slide for WiFi Information (When Needed) -->
+					<h2>To follow along on your laptop, visit <strong>https://lwoodrick.github.io/jwit-intro-to-coding</strong></h2>
 				</section>
-				<section><h1>Sample Embedded Exercise</h1>
-					<iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Loops?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+				<section> <!-- Opening -->
+					<h1>Intro to Coding
+						<br><small>with <strong>Ruby</strong></small>
+					</h1>
+
+					<p class="has-text-align-center" >
+						<small>Brought to you by Johnson Women in Tech (<a href="https://twitter.com/hashtag/JWiT2018" target="_blank">#JWiT2018</a>)</small>
+					</p>
+					<p class="has-text-align-center" style="line-height: 1;">
+						<small>Presented by Lauren Woodrick &amp; Austin Piëch</small><br>
+						<small>(<a href="http://www.twitter.com/loremipsam" target="_blank">@LoremIpsam</a> &amp; <a href="http://www.twitter.com/chiefpiech" target="_blank">@chiefpiech</a>)</small>
+					</p>
+				</section>
+
+				<section><!-- The Instructors -->
+					<h2>The Instructors</h2>
+					<p><strong>Lauren Woodrick</strong> is a designer/front-end web developer at Gaslight, a
+					software consultancy based in Cincinnati, Ohio.</p>
+					<p><strong>Austin Piëch</strong> is a student at Johnson (’18) who knows his way around a
+					command line, coding in Python and dabbling in Ruby.</p>
+					<p>Both of us have worked with the organization <strong>Girl Develop It!</strong>, whose
+					mission is to provide avenues and support for adult women learning
+					looking to break into programming.</p>
+				</section>
+
+				<section><!-- Why Learn How to Code? -->
+				<h2>Why Learn to Code?</h2>
+				<ul>
+					<li class="fragment">Become better able to communicate with developer colleagues</li>
+					<li class="fragment">Make it possible to bootstrap your own web app prototypes</li>
+					<li class="fragment">Improve your general technical sophistication</li>
+					<li class="fragment">Because learning is fun!</li>
+				</ul>
+				</section>
+				<section> <!-- Overview: What's Covered in the Class -->
+					<h2>What We'll Be Covering:</h2>
+					<ol>
+						<li class="fragment">The History of Programming</li>
+						<li class="fragment">How Computers Think</li>
+						<li class="fragment">Why Ruby?
+							<ol>
+								<li>Variables</li>
+								<li>Methods</li>
+								<li>Logical Structures</li>
+								<li>Loops</li>
+							</ol>
+						</li>
+						<li class="fragment">Let's Code in Ruby!</li>
+						<li class="fragment">What Should I Do Next?</li>
+					</ol>
+
+					<aside class="notes">
+						In this workshop, we'll be sampling from a number of topics, starting
+						with running through the history of how computers as we understand
+						them today came to be, how computers think,
+						and how the way humans talk to computers has changed. Then we'll dig
+						into some top-level programming concepts to lay a nice foundation for
+						your further forays into programming.
+
+						By the end of this workshop, you'll have created a very basic program in Ruby
+						and have an enhanced understanding of terrible programming jokes.
+					</aside>
+				</section>
+
+				<section data-background="img/slide-images/go-back.gif"> <!-- SEGUE: The History of Computing -->
+				</section>
+
+				<section> <!-- Computation: The Early Years -->
+					<h1>Computation: <br>The Early Years</h1>
+				</section>
+
+				<section> <!-- Computation: The Early Years: Analog Calculators -->
+					<h2 class="has-text-align-center">Computation: The Early Years</h2>
+
+					<div style="float: left; width: 33%;">
+						<img src="img/slide-images/abacus.jpg" alt="An abacus." />
+					</div>
+					<div style="float: left; width: 33%; margin: 0 0.5%">
+						<img src="img/slide-images/astrolabe.jpg" alt="An astrolabe." />
+					</div>
+					<div style="float: left; width: 33%;">
+						<img src="img/slide-images/sliderule.jpg" alt="A slide rule." />
+					</div>
+
+					<p class="has-text-align-center">
+						<i><small>Examples of some early analog calculators.</small></i>
+					</p>
+				</section>
+
+				<section> <!-- Computation: The Early Years: The Struggle of Science -->
+					<h2 class="has-text-align-center">Computation: The Early Years</h2>
+
+					<img src="img/slide-images/differenceengine.jpg" style="height: 50vh;" alt="A constructed difference engine" />
+					<p class="has-text-align-center">
+						<i><small>A difference engine built out.</small></i>
+					</p>
+				</section>
+
+				<section> <!-- Computation: The Early Years: The First Programmer-->
+					<h2 class="has-text-align-center">Computation: The Early Years</h2>
+					<img style="max-height: 65vh;" src="img/slide-images/adalovelace.jpg" alt="A portrait of Ada Lovelace." />
+					<p class="has-text-align-center"><small><i>Our Lady of Conceptual Programming, <strong class="blue">Ada Lovelace</strong></i></small></p>
+				</section>
+
+				<section> <!-- Computation: The Early Years: How Computers Turned Out, Part 2 -->
+					<h2 class="has-text-align-center">Computation: The Early Years</h2>
+
+					<img src="img/slide-images/colossus.png" style="height: 60vh" alt="Photo of two programmers next to the Colossus at Bletchley Park" />
+					<p class="has-text-align-center"><small><i>Programmers working with the Colossus, a Nat-zee code-breakin'<br> machine and one of the first digital computers.</i></small></p>
+
+					<aside class="notes">
+						... the device, however, was just as large.
+					</aside>
+				</section>
+
+				<section> <!-- The Evolution of Programming Languages -->
+				 <h2>The Evolution of Programming Languages</h2>
+				 <ul>
+					 <li class="fragment"><strong class="blue">First Generation</strong>: Machine Code</li>
+					 <li class="fragment"><strong class="blue">Second Generation (1949)</strong>: Assembly Code</li>
+					 <li class="fragment"><strong class="blue">Third Generation (Late 1950s)</strong>: High-Level Language</li>
+					 <li class="fragment"><strong class="blue">Fourth Generation (1980s)</strong>: Even Higher-Level Language</li>
+				 </ul>
+			 </section>
+
+			 <section> <!-- Programming Languages: Review -->
+				 <h2>First Generation</h2>
+				 <pre><code contenteditable="binary">011010000110010101101100011011000110111100100000011101110110111101110</code></pre>
+				 <p><small><i>"Hello World" in binary.</i></small></p>
+
+				 <aside class="notes">
+					 This binary slide is kind of a fake-out. This is just the characters for
+					 "Hello World" converted into their binary equivalents, this piece of code
+					 wouldn't get anything to render on the screen.
+				 </aside>
+			 </section>
+
+			 <section> <!-- Programming Languages: Review -->
+				 <h2>Second Generation</h2>
+				 <pre><code contenteditable="assembly" style="font-size: 0.6em; line-height: 1.3;">section     .text
+global      _start               		;must be declared for linker (ld)
+
+_start:                          		;tell linker entry point
+
+ mov     edx,len              		;message length
+ mov     ecx,msg              		;message to write
+ mov     ebx,1                		;file descriptor (stdout)
+ mov     eax,4                		;system call number (sys_write)
+ int     0x80                 		;call kernel
+
+ mov     eax,1                		;system call number (sys_exit)
+ int     0x80                 		;call kernel
+
+section     .data
+
+msg     db  'Hello, world!',0xa  ;our dear string
+len     equ $ - msg              ;length of our dear string
+				 </code></pre>
+				 <p><small><i>"Hello World" in Assembly.</i></small></p>
+			 </section>
+
+			 <section> <!-- Enter the Compiler: Grace Hopper -->
+				 <img style="max-height: 65vh;" src="img/slide-images/gracehopper.jpg" alt="A portrait of Grace Hopper" />
+				 <p class="has-text-align-center">
+					 <small><i>Our Lady of Code Compilation, <strong class="blue">Grace Hopper</strong></i></small>
+				 </p>
+				 <aside class="notes">
+					 This person was Grace Hopper, who, after absolutely crushing it in the
+					 Navy during WWII writing programs used on the US's ships, proceeded to
+					 absolutely crush it in the private sector and in 1952 wrote the
+					 first compiler — a computer program that would convert honest-to-goodness
+					 text, not alphabet soup, into binary that any computer could read.
+				 </aside>
+			 </section>
+
+			 <section data-background="img/slide-images/mindblown.gif">
+				 <!-- Dude dressed as Carl Sagan Cosmos-style getting his mind blown. -->
+				 <aside class="notes">
+					 This floored her coworkers, but once they were convinced that the
+					 compiler didn't bite, it precipitated the next wave of programming
+					 languages...
+				 </aside>
+			 </section>
+
+			 <section> <!-- Programming Languages: Review -->
+				 <h2>Third Generation</h2>
+				 <pre><code contenteditable="cobol">IDENTIFICATION DIVISION.
+PROGRAM-ID. HELLOWORLD.
+PROCEDURE DIVISION.
+MAIN.
+DISPLAY 'Hello, world.'.
+STOP RUN.</code></pre>
+				 <p><small><i>"Hello World" in COBOL.</i></small></p>
+			 </section>
+
+			 <section> <!-- Third Generation Programming Languages-->
+				 <h2>Third Generation</h2>
+				 <p><strong>Examples: </strong></p>
+				 <ul>
+					 <li>COBOL</li>
+					 <li>FORTRAN</li>
+					 <li>BASIC</li>
+					 <li>C</li>
+				 </ul>
+
+				 <aside class="notes">
+					 This precipitated the creation of a number of languages, some getting more
+					 traction than others. Assembly is still used for programs that work closely
+					 with hardware and need the device specificity and control, but for programs
+					 that humans needed to program and interact with, high-level languages were
+					 the way to go.
+				 </aside>
+			 </section>
+
+			 <section> <!-- Programming Languages: Review -->
+				 <h2>Fourth Generation</h2>
+				 <pre><code contenteditable="ruby">puts 'Hello, world!'</code></pre>
+				 <p><small><i>"Hello World" in Ruby.</i></small></p>
+			 </section>
+
+			 <section> <!-- Fourth Generation Programming Languages-->
+				 <h2>How We Talk To Computers: <br>The Fourth Generation</h2>
+				 <p><strong>Examples: </strong></p>
+				 <ul style="float: left;">
+					 <li>JavaScript</li>
+					 <li>Python</li>
+					 <li>Ruby</li>
+					 <li>MySQL + PostgresSQL</li>
+				 </ul>
+
+				 <aside class="notes">
+					 While there's not a super-distinct boundary between the third and fourth generations,
+					 there were definite developments in how programs handled stored data and
+					 also in avenues for code use — namely, the emergence of the internet. But by this
+					 time, there's a clear interest in making languages as clear as possible
+					 to programmers, which is very nicely summed up in the philosophy of the
+					 creator of Ruby, Yukihiro "Matz" Matsumoto. (slide advance)
+				 </aside>
+			 </section>
+
+			 <section> <!-- How Computers Think -->
+				 <h1>How Do Computers Do Their Thinking?</h1>
+			 </section>
+
+			 <section> <!-- How Computers Think -->
+				 <h2>How Computers Think</h2>
+				 <p>
+					 Computers have three types of memory &mdash; <strong class="blue">Read-Only Memory</strong>,
+					 <strong class="blue">Hard Drive Memory</strong>, and <strong class="blue">Random Access Memory</strong>.
+				 </p>
+
+				 <aside class="notes">
+					 ... once digital computers arrived, the base on which computers did
+					 all of their thinking, colloquially referred to as “memory,” stabilized
+					 into three forms, . It operates a little differently from human memory,
+					 but I'll try to make it as clear as possible.
+				 </aside>
+			 </section>
+
+			 <section> <!-- How Do Computers Do Their Thinking: ROM -->
+				 <h2>How Computers Think: ROM</h2>
+				 <p>
+					 <strong class="blue">ROM</strong>, or <strong class="blue">Read-Only Memory</strong>, is hardwritten
+					 into chips and handles data essential to a computer's operation.
+				 </p>
+
+				 <aside class="notes">
+					 ROM, or read-only memory, is memory that’s hardwritten onto chips. This kind of
+					 memory is typically responsible for serving up the kind of data that’s your
+					 computer would be hard-pressed to operate without — like an operating system.
+					 Of course, making it quick to access means that files in it can’t be edited,
+					 and means that your computer won’t forget how to operate when it’s turned off.
+
+					 Do we have any gamers in our midst? Or been down to 16-Bit?
+				 </aside>
+			 </section>
+			 <section>
+				 <h2 class="has-text-align-center">How Computers Think: ROM</h2>
+				 <small><strong class="blue">Read-Only Memory</strong> functions similarly to the brainstem.</small>
+				 <img src="img/slide-images/heavy-breathing-cat.gif" alt="A fat cat with the caption 'heavy breathing' breathes heavily.">
+				 <small style="display: block;" class="fragment">(I'm sorry...)</small>
+			 </section>
+
+			 <aside class="notes">
+				 In a computer, it operates a bit like your brain stem — taking care of activities
+				 that are necessary to life so you don’t have to spend all of your thinking on
+				 performing them, like breathing. I am sorry if you are now thinking about breathing
+				 and actively doing it right now.
+			 </aside>
+
+		 <!-- How Do Computers Do Their Thinking: Hard Drive Memory -->
+
+			 <section>
+				 <h2>How Computers Think: <br>Hard Drive Memory</h2>
+				 <p>
+					 <strong class="blue">Hard Drive Memory</strong> is editable memory that
+					 holds files and programs that you create and install.
+				 </p>
+
+				 <aside class="notes">
+					 Hard drive memory — not explicitly named as memory, but still, technically memory, holds files and
+					 programs on your computer that you create and install. While ROM is fixed, memory on your hard drive
+					 can be written and edited, which makes it very much like long-term memory. When you “save” files,
+					 you’re writing them to your hard drive. Flash drives, similarly, are a type of hard drive memory.
+				 </aside>
+			 </section>
+
+			 <section>
+				 <h2 class="has-text-align-center">How Computers Think: <br>Hard Drive Memory</h2>
+				 <img src="img/slide-images/insideout.jpeg" alt="The Emotions from Inside Out">
+
+				 <aside class="notes">
+					 The human analogue of this type of computer memory is long-term
+					 memory. If you’ve seen the movie Inside Out, the way in which memories
+					 are stored is actually pretty similar to how computers hold onto data.
+				 </aside>
+			 </section>
+
+
+			 <!-- How Do Computers Do Their Thinking: RAM -->
+
+				 <section>
+					 <h2>How Computers Think: RAM</h2>
+					 <p>
+						 <strong class="blue">RAM</strong>, or <strong class="blue">Random Access Memory</strong>
+						 is volatile memory that handles data that the computer is actively using.
+					 </p>
+
+					 <aside class="notes">
+						 ... is volatile — the data it grapples with isn’t ‘written’
+						 anywhere, just temporarily stored on a series of electrified capacitors.
+						 The more capacitors there are dedicated to this purpose, the more a computer
+						 can do at once.
+
+						 Has anyone had their computer crash and lost hours worth of work before?
+					 </aside>
+				 </section>
+
+				 <section>
+					 <h2 class="has-text-align-center">How Computers Think: RAM</h2>
+					 <img style="max-height: 55vh;" src="img/slide-images/50firstdates.jpg" alt="Confused Drew Barrymore sitting next to Adam Sandler.">
+					 <p class="has-text-align-center"><strong class="blue">RAM</strong> is like our working memory.</p>
+					 <aside class="notes">
+						 Computers are very much like Drew Barrymore's character in 50 First Dates —
+						 doomed to lose any "new" memories whenever she loses consciousness. Both tragic,
+						 and a blessing in that, as far as she knows, Adam Sandler's filmography ends
+						 in the year 2003.
+
+						 Fortunately, a lot of programs do some stealth-saving in the background
+						 and provide you with recovery files, but that pain and terror is a part of RAM.
+					 </aside>
+				 </section>
+
+				 <section>
+					 <h2>How Computers Think: A Review</h2>
+					 <ul>
+						 <li><strong class="blue">ROM</strong> handles data that's essential for device operation</li>
+						 <li><strong class="blue">Hard Drive</strong> handles hardwritten, saved data.</li>
+						 <li><strong class="blue">RAM</strong> handles data your computer is using.</li>
+					 </ul>
+				 </section>
+
+				 <section> <!-- Why Ruby? -->
+					<h1>Why Ruby?</h1>
+				 </section>
+
+				 <section> <!-- Why Ruby? -->
+					<h2>Why Ruby?</h2>
+					<ul>
+						<li>Ruby was written with the humans writing it in mind.</li>
+					</ul>
+				 </section>
+
+			 <section> <!-- Matz on Ruby-->
+				 <img src="img/slide-images/ruby.jpeg" style="height: 22vh" alt="Ruby on Rails">
+				 <blockquote>I want to see Ruby help <br>every programmer in the world <br>to be productive, and to enjoy programming, and to be happy.</blockquote>
+				 <p class="has-text-align-center"><small>&mdash; Yukihiro "Matz" Matsumoto</small></p>
+
+				 <aside class="notes">
+					 ... which, as far as goals go, is both noble and adorable.
+				 </aside>
+			 </section>
+
+			 <section> <!-- Why Ruby? -->
+				<h2>Why Ruby?</h2>
+				<ul>
+					<li>Ruby was written with the humans writing it in mind.</li>
+					<li>Ruby is a friendly language surrounded with a friendly community.</li>
+				</ul>
+			 </section>
+
+			 <section> <!-- Matz on Ruby-->
+				 <img src="img/slide-images/rails-logo.svg" style="height: 22vh" alt="Ruby on Rails">
+				 <blockquote>It wasn’t until I discovered programming at a high level of abstraction, the kind suited for making business and information systems, that I started to realize programming, perhaps, was something for me after all.</blockquote>
+				 <p class="has-text-align-center"><small>&mdash; David Heinemeyer Hansson, Creator of Ruby on Rails</small></p>
+			 </section>
+
+			 <section> <!-- Why Ruby? -->
+				<h2>Why Ruby?</h2>
+				<ul>
+					<li>Ruby (born in the mid-90’s) and Rails (born in 2005) both have a lot of mileage on them, so any
+					problems you run into will have an easily-recoverable answer on Google.
+						<ul class="fragment">
+							<li>Your first homework assignment is to visit Stack Overflow. Think of it as an encyclopedia of problems, and there’s almost <i>always</i> a solution or two… or three…</li>
+						</ul>
+					</li>
+				</ul>
+			 </section>
+
+			 <section> <!-- Let's Ruby? -->
+				<h1>Let's Ruby!</h1>
+			 </section>
+
+			 <section> <!-- Let's meet the console. -->
+				 <h2>Let's Meet the Terminal!</h2>
+				 <p>
+					 The <strong class="blue">terminal</strong> is a space where we
+					 run chunks of code and test them to make sure that it's behaving in
+					 the way we want it to.
+				 </p>
+				 <p>
+					 For this course, we'll be making use of an online terminal named <a href="https://repl.it">repl.it</a>.
+				 </p>
+				 <p>As you get more into programming, you can use your computer’s own
+						terminal and a program like <strong>Atom</strong> and <strong>NotePad++</strong> to build and run full
+						programs. But for now, repl.it is a great playground to start in.</p>
+
+				 <aside class="notes">
+					 But before we get started, let's meet the terminal! The terminal is
+					 a space where we can run chunks of code and test them to make sure
+					 that it's behaving predictably.
+
+					 As I alluded to earlier, we'll be sampling from Ruby, Python, and JavaScript,
+					 but for this initial portion, we'll be using JavaScript, which
+					 Taylor is going to be running the Intro class for next Wednesday.
+				 </aside>
+			 </section>
+
+
+				<section> <!-- Let's Ruby -->
+					<h2>Let's Ruby</h2>
+					<p>We'll be covering
+						<strong class="fragment highlight-blue">Variables</strong>,
+						<strong class="fragment highlight-blue">Methods</strong>,
+						<strong class="fragment highlight-blue">Conditionals</strong>, and
+						<strong class="fragment highlight-blue">Loops</strong>!
+					</p>
+				</section>
+
+				<section>
+					<h2>Variables</h2>
+					<p>A <strong>variable</strong> is essentially a <strong>storage</strong> container for information,
+information that is, within the context of Ruby, an object.</p>
+					<p class="fragment">Variables can hold several different flavors of object, such as strings,
+					numbers, nil, arrays, hashes, and symbols, but here we'll be
+					covering <strong>numbers</strong>, <strong>strings</strong>, and <strong>booleans</strong>.</p>
+				</section>
+
+				<section> <!-- Variables -->
+					<h2>Variables</h2>
+
+            <p class="fragment">In Ruby, <strong>variables</strong> are assigned by specifying a name for the variable,
+followed by an equals sign, and then including the value.</p>
+						<div class="fragment">
+								<p style="font-weight: bold; text-align: left;" class="green small">Examples:</p>
+
+								<pre><code contenteditable class ="javascript">my_name = "Lauren"
+my_age = 28
+teaching_right_now = true</code></pre>
+						</div>
+            <p class="fragment small" style="margin-top: 20px;">Variables come in several flavors, but here we'll be covering<br> <strong class="blue">Numbers</strong>, <strong class="blue">Strings</strong>, and <strong class="blue">Booleans</strong>.</p>
+				</section>
+
+				<section> <!-- Variables: Numbers -->
+					<h2>Variable Types: Numbers</h2>
+					<p class="copy--small box">Variables can be used to store numbers</p>
+
+					<aside class="notes">
+						True to the computer's versatile calculator origins, variables can be
+						used to store numbers that are used across a program with a meaningful
+						label.
+					</aside>
+				</section>
+
+				<section data-background="img/slide-images/amazonsample.jpg"> <!-- Variables: Example Slide -->
+					<aside class="notes">
+						Now, time for some programming "Where's Waldo" — what items on this
+						Amazon page could be stored as number variables?
+
+						(Gather responses, hunt a little bit.)
+					</aside>
+				</section>
+
+				<section> <!-- Variables: Numbers (cont.) -->
+					<h2>Variable Types: Numbers</h2>
+					<p class="copy--small box">Variables can be used to store numbers.</p>
+					<pre><code contenteditable class ="javascript">book_quantity = 2
+book_price = 20
+book_discount = 0.41</code></pre>
+
+					<aside class="notes">
+						Yes indeed — the price of the book could be stored as a number, as well
+						as the quantity ordered, how much the book is discounted (list anything
+						else mentioned here too.)
+					</aside>
+				</section>
+
+				<section> <!-- Variables: Strings -->
+					<h2>Variable Types: Strings</h2>
+					<p class="copy--small box">Variables can also be used to store text.</p>
+
+					<aside class="notes">
+						Another type of variable is a string, whose purpose is to hold bits of text.
+					</aside>
+				</section>
+
+				<section data-background="img/slide-images/amazonsample.jpg"> <!-- Variables: Example Slide -->
+					<aside class="notes">
+						Rolling back to the Amazon page, what bits could be stored as
+						string variables?
+
+						(Gather responses, hunt a little bit.)
+					</aside>
+				</section>
+
+				<section> <!-- Variables: Strings (cont.) -->
+					<h2>Variable Types: Strings</h2>
+					<p class="copy--small box">Variables can also be used to store text.</p>
+					<pre><code contenteditable class ="javascript">book_title = "Romeo and/or Juliet: A Chooseable-Path Adventure"
+book_author = "Ryan North"</code></pre>
+					<p>
+						Usually when a string is created in a program, it's surrounded by quotation marks.
+					</p>
+
+					<aside class="notes">
+						... pretty much all of the text on the page can be stored as a string,
+						but in this case, I had extracted the title of the book and the author
+						of the book for the sake of example. Either way, typically when a string
+						is created by a program, it's surrounded by quote marks.
+				</section>
+
+				<section> <!-- Variables: Numbers as Strings -->
+					<h2>Variable Types: <br>Numbers as Strings</h2>
+					<p>You can store numbers as a string variables too!</p>
+					<p>This is best used for numbers that aren't/shouldn't be used in mathematical
+					equations. Numbers can also become part of strings if directly added to them.</p>
+
+					<pre class="fragment"><code contenteditable class ="javascript">jennys_number = "8675309"</code></pre>
+
+					<aside class="notes">
+						However, because it's kind of difficult to manipulate strings, it can
+						sometimes be a good idea to store numbers as string variables in order
+						to prevent them from being used in mathematical equations. If you
+						happened to be Tommy Tutone, you would probably store Jenny's number
+						as a string after insisting that she not change it.
+					</aside>
+				</section>
+
+				<section> <!-- Variables: Booleans -->
+					<h2>Variable Types: Booleans</h2>
+					<p class="copy--small box">Variables can also be used to store<br> <strong class='blue'>TRUE</strong> or <strong class='blue'>FALSE</strong> as a value.</p>
+					<aside class="notes">
+						Variables can also be used to store true or false as a value.
+					</aside>
+				</section>
+
+				<section data-background="img/slide-images/amazonsample.jpg"> <!-- Variables: Example Slide -->
+					<aside class="notes">
+						Once again, the Amazon page — what bits could be stored as
+						a boolean value?
+
+						(Gather responses, hunt a little bit.)
+					</aside>
+				</section>
+
+				<section> <!-- Variables: Booleans (cont.) -->
+					<h2>Variable Types: Booleans</h2>
+					<p class="copy--small box">Variables can also be used to store <strong class='blue'>TRUE</strong> or <strong class='blue'>FALSE</strong> as a value.</p>
+					<pre><code contenteditable class ="javascript">logged_in = false;
+prime_member = false;</code></pre>
+					<p>
+						You can define a condition, then use a Boolean to tell the computer whether that condition is true or false.
+					</p>
+
+					<aside class="notes">
+						So some of the Amazon examples could include the user's logged-in
+						state or Amazon Prime status. Generally, booleans are used to state
+						whether a given condition is true or false. Speaking of which...
+					</aside>
+				</section>
+
+				<section> <!-- Variables: Variables are mutable -->
+					<h2>Variable Ability #1</h2>
+					<p>The value of variables can be updated over the course of a program.</p>
+				</section>
+
+				<section> <!-- Variables: Variables are mutable (example) -->
+					<div>
+						<h2 class="has-text-align-center">Variable Ability #1</h2>
+						<img src="img/slide-images/kittyvillage.jpg" alt="A picture of a cat sitting in a cluster of three boxes" />
+					</div>
+					<aside class="notes">
+						Like we learned earlier, variables are storage containers... (advance
+						slide) ... much like this box is a container for cats. (advance slide)
+					</aside>
+				</section>
+
+				<section>
+					<h2>Variable Property #1</h2>
+					<iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Variable-Property-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+				</section>
+
+				<section> <!-- Variables: Variables are mutable (example) -->
+						<h2>Variable Property #1</h2>
+						<pre><code contenteditable class ="javascript">kitty_village_population = 1
+puts kitty_village_population
+kitty_village_population = 0
+puts kitty_village_population</code></pre>
+
+					<aside class="notes">
+						If we were to take a census of Kitty Village, we might declare the variable
+						kittyVillagePopulation is declared and then assign it the value of 1.
+						If the rather irritated cat removed itself from Kitty Village, then we
+						might reassign the value of Kitty Village to be 0. (follow link)
+					</aside>
+				</section>
+
+				<section> <!-- Interlude: Comments-->
+					<h2>Interlude: Commenting</h2>
+					<p>When programming it can be difficult to keep track of what's happening in a particular bit of code</p>
+					<p>This is where <strong class="blue">comments</strong> come in! They allow you to make notes in your
+					code without them interfering.</p>
+					<p>
+						In Ruby, comment lines are started with a hash sign (<strong class="blue">#</strong>). If a hash is included
+mid-line, it will (usually) turn itself and all text following into a comment too.
+					</p>
+
+					<aside class="notes">
+						Just like writing on your monitor with a marker, but scrollable and doesn't make a mess.
+					</aside>
+				</section>
+
+
+				<section> <!-- Interlude: What's the deal with console.log? -->
+					<h2>Interlude: What's this "puts"?</h2>
+					<p>Not every change in your code is going to be reflected on-screen</p>
+					<p>One way to make sure everything is behaving correctly is to <strong class="blue">log to the console</strong>.</p>
+
+					<aside class="notes">
+						(Read slide.) This was demonstrated in the previous chunk to show
+						that the value of kittyVillagePopulation was indeed being changed.
+						console.log is used for this purpose in JavaScript, while you see print
+						used for the same purpose in Python and Ruby.
+					</aside>
+				</section>
+
+				<section>
+					<h1>Before we move on, a variable mini-quiz.</h1>
+				</section>
+
+				<section data-background="img/slide-images/amazonsample-quiz.jpg">
+					<aside class="notes">
+						(Run through colors and ask what type of variable might
+						be involved with each chunk.)
+					</aside>
+				</section>
+
+				<section> <!-- Variables: Numbers can be manipulated like numbers, strings are complicated. -->
+					<h2>Variable Property #2</h2>
+					<p><strong class="blue">Number variables</strong> can be manipulated, just like the numbers they represent.
+					<strong class="blue">String variables</strong>, however, can only be mashed together.</p>
+				</section>
+
+				<section> <!-- Variables: Numbers can be manipulated like numbers, strings are complicated. -->
+					<h2>Variable Property #2</h2>
+<iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Variable-Property-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+					<aside class="notes">
+						Now, variable ability number two — you can run calculations
+						with number variables as if they were numbers, but with basic operations,
+						strings can only be mashed together. And now, a demonstration.
+
+						With the variables we gathered earlier from the webpage, we could take
+						bookPrice and bookDiscount to calculated the bookDiscountedPrice, then
+						even create an order total.
+
+						If we then wanted to, say, get rid of the subtitle in the title, and
+						tried to do the obvious thing (subtracting the appropriate part of the string),
+						we run into a problem. NaN. Which is the computer's way of complaining that you're
+						trying to manipulate something that's clearly not a number like a number.
+					</aside>
+				</section>
+
+				<section> <!-- Variables: Numbers can be manipulated like numbers, strings are complicated, illustrated -->
+					<h2 class="has-text-align-center">Variable Property #2</h2>
+					<div class="fragment" style="width: 50%; float:left;">
+						<img src="img/slide-images/thumbsup.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
+						<p class="small has-text-align-center">
+							<small><i>Computers on numbers.</i></small>
+						</p>
+					</div>
+					<div class="fragment" style="width: 50%; float:left;">
+						<img src="img/slide-images/tinagroan.gif" alt="Brent Rambo looking away from a computer and giving a thumbs up." />
+						<p class="small has-text-align-center">
+							<small><i>Computers on strings.</i></small>
+						</p>
+					</div>
+					<aside class="notes">
+						Numbers are computers' jam, but strings are a smidge too abstract for computers.
+						It's possible to remove text from strings, but specialized instructions are required
+						to find and then manipulate individual sections of text as if they were alphabet
+						blocks.
+					</aside>
+				</section>
+
+				<section> <!-- Errors -->
+					<h2>Interlude: Errors</h2>
+					<p>Ruby is also a great language for beginners because the error reporting
+system is very robust &mdash; errors will tell you what went wrong in your
+code and where.</p>
+					<pre><code contenteditable class ="ruby">undefined method `-' for "don\u2019t stop believing!":String
+Did you mean? -@
+(repl):15:in `&lt;main&gt;'</code></pre>
+				</section>
+
+				<section> <!-- Errors -->
+					<h2>Interlude: Errors</h2>
+					<pre><code contenteditable class ="ruby">undefined method `-' for "don\u2019t stop believing!":String
+Did you mean? -@
+(repl):15:in `&lt;main&gt;'</code></pre>
+	<p>This is the kind of thing you can copy and paste into Stack Overflow or
+Google to see if the internet has anything to say about it.</p>
+				</section>
+
+				<section> <!-- Methods -->
+					<h2>Methods</h2>
+					<p><strong>Methods</strong> are like programming recipes, taking your “ingredients” and
+manipulating them until you get your desired result.</p>
+<p>They also make it easier to quickly run repetitive tasks.</p>
+				</section>
+
+				<section data-background="img/slide-images/carlsagan.jpg"> <!-- Methods -->
+				</section>
+
+				<section data-background="img/slide-images/sandralee.jpg"> <!-- Methods -->
+				</section>
+
+				<section> <!-- Methods -->
+					<h2>Methods</h2>
+					<p>The most basic methods are mathematical, but other useful, time-saving
+methods are baked into certain types of Ruby objects automatically.</p>
+<p>These are called by declaring your object or the variable associated with
+it, followed by a period and the name of the method.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@lauren_woodrick/Intro-to-Coding-Methods-Part-1-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+				</section>
+
+				<section> <!-- Methods -->
+					<h2>Methods</h2>
+					<p>So long as the method is in a specific object type’s wheelhouse, it’ll run.</p>
+					<pre><code contenteditable class ="ruby">sentence = ”Coffee is for closers only!”
+puts sentence.length
+# puts "27”
+
+special_number = 48
+puts special_number.odd?
+# puts "false”</code></pre>
+				</section>
+
+				<section> <!-- Methods -->
+					<h2>Methods</h2>
+					<p>So long as the method is in a specific object type’s wheelhouse, it’ll run.</p>
+					<pre><code contenteditable class ="ruby">puts sentence.length.odd?
+# puts ”true”
+puts sentence.class
+# puts ”String”
+puts sentence.length.class
+# puts ”Fixnum”</code></pre>
+<p>You can also string these ready-made methods together.</p>
+</section>
+
+<section> <!-- Methods -->
+	<h2>Methods</h2>
+	<p>To see what methods come packaged with different types of objects, use the <code contenteditable class ="ruby">.class</code> method on the object, then look up the object type in <a href="https://ruby-doc.org/core-2.2.0/Method.html">Ruby’s documentation</a> to see what you can do.</p>
+	<p>If you want to work smarter and not harder, you can also search to see if there’s a way to do what you want with your object type also.</p>
+</section>
+
+<section> <!-- Methods -->
+	<h2>Methods</h2>
+	<p>Oftentimes, you do need to write your methods from scratch — let’s pop over to repl.it to see how it’s done.</p>
+	<p><a href="https://repl.it/FyeZ/2">Methods, Part 2</a></p>
+</section>
+
+<section> <!-- Methods -->
+	<h2>Methods</h2>
+	<p>You start your method with def to give it a name and specify your ingredients — or parameters — then use end when you’re finished. To call your new method, you call the method with its parameters, and voilà!</p>
+	<pre><code contenteditable class ="ruby">def squarify(x)
+  puts x * x
+end
+
+squarify(4)
+# puts 16 in the console.</code></pre>
+</section>
+
+<section><!-- Interlude: Scope -->
+	<h2>Interlude: Scope</h2>
+	<p>In Ruby, variables are block-scoped, which means that if a variable isn’t defined inside of a block (in our case, a method we’ve made), it is considered undefined and we can’t retrieve or modify it.</p>
+	<p class="fragment">To give a <strong>local variable</strong> (a variable’s default mode) a “passport” and make it <strong>global</strong> (accessible across the application), we declare the variable outside of all blocks and start it off with a dollar sign (<strong>$</strong>)  <a href="https://repl.it/Fylj/4">(Scope)</a>
+</p>
+</section>
+
+<section><!-- Interlude: Scope -->
+	<h2>Interlude: Scope</h2>
+	<p>Not dissimilarly from real life, it takes “money” for a variable to travel.</p>
+	<pre><code contenteditable class ="ruby">$oreos_in_box = 36
+
+def eat_oreo
+  message = “Oh no, I slipped and an Oreo fell into my mouth!”
+  $oreos_in_box = $oreos_in_box - 1
+  puts message
+end
+
+def how_many_oreos_left
+  puts $oreos_in_box
+end</code></pre>
+</section>
+<section><!-- Developer Parlance: Out of Scope -->
+	<h2>Interlude: Scope</h2>
+	<p>Within the context of a software project, if a developer declares certain functionality “out of scope” , they mean that allowances for that functionality are undefined within the [agreed-upon] context of the project or project phase.</p>
+	<p class="fragment">If this is being said within your team, it’s a good time to either discuss how essential the functionality would be to the current iteration, then adjusting your feature set or deadline accordingly.</p>
+</section>
+
+<section><!-- Let's Try It All Together! -->
+	<h2>Let's Try It All Together!</h2>
+	<p>We’re going to pop back on over to repl.it for your first assignment!</p>
+	<p><a href="https://repl.it/FyoU/1">(Assignment #1: DoorBot)</a></p>
+</section>
+
+<section><!-- Let's Try It All Together! -->
+	<h2>Let's Try It All Together!</h2>
+	<p class="small">A possible solution:</p>
+	<pre><code contenteditable class ="ruby">$party_pop = 36
+
+def greet(name)
+  $party_pop = $party_pop + 1
+  puts "Hey, #{name}! How's it going?"
+end
+
+def bye(name)
+  $party_pop = $party_pop - 1
+  puts "Have a good night, #{name}!"
+end
+
+def party_count
+  puts "There are #{$party_pop.to_s”} people at the party!"
+end</code></pre>
+</section>
+
+<section data-background="img/slide-images/successkid.png"> <!-- Trapped in a Loop -->
+</section>
+
+
+
+				<section> <!-- Logical Structures -->
+					<h2>Let's Talk To Computers: Logical Structures</h2>
+					<p>While pretty fun, DoorBot was a glorified tally counter and nametag maker. (Sorry, DoorBot)</p>
+					<p class="fragment">The real programming secret sauce begins with control flow &mdash; logical structures that provide the basis for manipulating data in a more intelligent way.</p>
+				</section>
+
+				<section> <!-- Operators -->
+					<h2>Let's Talk To Computers: Operators</h2>
+            <p class="left-align small">Operators are words or symbols that let you
+							<strong class="blue">compare or evaluate</strong> something to produce an output.</p>
+						<p class="left-align small"><strong class="green">A few examples:</strong></p>
+
+              <div class="halfblock">
+                <ul class="small">
+                  <li>== (equal to**)</li>
+                  <li>> (greater than)</li>
+                  <li>&lt; (less than)</li>
+                  <li>>= (greater than or equal to)</li>
+                </ul>
+              </div>
+              <div class="halfblock last">
+                <ul class="small">
+                  <li>&gt; = (less than or equal to)</li>
+                  <li>!= (not equal)</li>
+                  <li>and</li>
+                  <li>or</li>
+                </ul>
+              </div>
+							<p class="left-align small fragment" style="color: #aaa;">
+								** "Equal to" is a double equal sign because a single equal sign is reserved in the language for making variable assignments.
+							</p>
+
+							<aside class="notes">
+								In order to articulate conditions, we need the help of operators, which are
+								words and symbols that let you compare or evaluate something
+								to produce an output. Some of these are once again familiar from math class,
+								But the double equals sign is a little different — any guesses as to why?
+
+								... (advance slide)
+
+								Yup. In programming languages, a single equal sign is used to assign values
+								while a double equal sign is used to determine if two values are equivalent.
+								Additionally, the exclamation point in front of an equal sign is the programming
+								equivalent of not equal to. "And" will run code if both listed conditions are true,
+								"or" will evaluate to true if one condition is true. Let's try them out!
+							</aside>
+				</section>
+
+				<section> <!-- Let's try Operators -->
+					<h2>Let's Try Operators!</h2>
+						<p>We're going to pop over to repl.it to test our operator knowledge!</p>
+						<p><a href="https://repl.it/Fwwh/4" target="_blank">(Operators Test)</a></p>
+				</section>
+
+				<section> <!-- Let's try Operators -->
+					<h2>Let's Try Operators!</h2>
+						<p>When operator comparisons or evaluations are made, they evaluate to booleans (i.e. are <strong>true</strong> or <strong>false</strong>)</p>
+						<pre><code contenteditable class ="ruby">is_less_than = 9 < 1
+puts is_less_than
+# puts “false”</code></pre>
+				</section>
+
+				<section> <!-- If/Else Statements -->
+					<h2>Logical Structures:<br>If/Else Statements</h2>
+					<p>The most basic form of control flow is the <strong>if/else statement</strong>. If/Else statements evaluate a condition, also known as an <strong>argument</strong>, and perform actions based on the result.</p>
+				</section>
+
+				<section> <!-- If/Else Statements -->
+					<h2 class="has-text-align-center">Logical Structures:<br>If/Else Statements</h2>
+					<img src="img/slide-images/truthiness.jpg" alt="Steven Colbert coining truthiness" />
+					<p class="has-text-align-center"><strong class="green">If the condition is true</strong>, then the computer does the action or actions that are listed after the <b class="blue">IF</b> statement</p>
+					<p class="has-text-align-center"><strong class="green">If the condition is false</strong>, then the computer does the action or actions that are listed in the <b class="blue">ELSE</b> statement.</p>
+
+					<aside class="notes">
+						If we popped back to Amazon, we could say "IF" you're logged in, show your name and cart numbers.
+						"ELSE", show a link to the login page. Also, "IF" you're an Amazon Prime member, you get free shipping!
+						"ELSE", you have to pay for shipping like a peasant.
+					</aside>
+				</section>
+
+				<section> <!-- If/Else Statements -->
+					<h2 class="has-text-align-center">Logical Structures:<br>If/Else Statements</h2>
+					<p>A statement can be as simple as just specifying an if condition, or provide an additional fallback action in the case of a failure. Additional conditions can also be evaluated when an argument falls through the <strong>if</strong> condition with <strong>elsif</strong>.</p>
+					<pre><code contenteditable class="ruby">if argument
+	puts “The condition passes!”
+end</code></pre>
+				</section>
+
+				<section> <!-- If/Else Statements -->
+					<h2 class="has-text-align-center">Logical Structures:<br>If/Else Statements</h2>
+					<p>A statement can be as simple as just specifying an if condition, or provide an additional fallback action in the case of a failure. Additional conditions can also be evaluated when an argument falls through the <strong>if</strong> condition with <strong>elsif</strong>.</p>
+					<pre><code contenteditable class="ruby">if argument
+	puts “The condition passes!” 
+ else 
+	puts “No conditions were met…” 
+end</code></pre>
+				</section>
+
+				<section> <!-- If/Else Statements -->
+					<h2 class="has-text-align-center">Logical Structures:<br>If/Else Statements</h2>
+					<p>A statement can be as simple as just specifying an if condition, or provide an additional fallback action in the case of a failure. Additional conditions can also be evaluated when an argument falls through the <strong>if</strong> condition with <strong>elsif</strong>.</p>
+					<pre><code contenteditable class ="ruby">if argument
+	puts “The condition passes!” 
+elsif different_argument 
+	puts “The last condition didn’t   pass, but this one did!”
+ else 
+	puts “No conditions were met…” 
+end</code></pre>
+				</section>
+
+				<section> <!-- Let's Try If/Else Statements -->
+					<h2>Logical Structures:<br>If/Else Statements</h2>
+          <p>We're going to pop over to <a href="https://repl.it/CXlG" target="_blank">repl.it</a>.</p>
+					<p><a href="https://repl.it/CXlG/2">(If/Else Statements)</a></p>
+				</section>
+
+				<section> <!-- If/Else Statements -->
+					<h2>Logical Structures:<br>If/Else Statements</h2>
+					<p>If only an <strong>if</strong> statement is included, the code will only execute if the specified <strong>argument</strong> returns <strong>true</strong>.</p>
+					<pre><code contenteditable class ="ruby">cart_total = 8
+
+if cart_total > 2
+  puts "You get free shipping!"
+end</code></pre>
+				</section>
+
+				<section> <!-- If/Else Statements -->
+					<h2>Logical Structures:<br>If/Else Statements</h2>
+					<p>If you want to include a fallback that will execute if the previous condition fails, you include an <strong>else</strong> statement <strong>after your if code</strong> and before the end.</p>
+					<pre><code contenteditable class ="ruby">cart_total = 8
+
+if cart_total > 2
+  puts "You get free shipping!"
+else
+  puts "Sorry, buddy, gotta pay for shipping…"
+end</code></pre>
+				</section>
+
+				<section> <!-- Try an If/Else Statement Yourself! -->
+					<h2>Try an If/Else Statement Yourself!</h2>
+					<p>Augment the code for the terrible Oreo calamity to provide extra color and drama.</p>
+					<p><a href="https://repl.it/Fysx/1">(If/Else Yourself!)</a></p>
+				</section>
+
+				<section> <!-- Try an If/Else Statement Yourself! -->
+					<h2 class="has-text-align-center">Try an If/Else Statement Yourself!</h2>
+					<pre><code contenteditable class ="ruby">$oreos_in_box = 6
+
+def eat_oreo
+$oreos_in_box = $oreos_in_box – 1
+ if $oreos_in_box == 0
+    puts  "Oh geez, I can't believe it happened to the entire box."
+  elsif $oreos_in_box < 0
+    puts  "There are no more oreos..."
+  else
+    puts “Oh no, I slipped and an Oreo fell into my mouth!”
+  end
+end
+
+def how_many_oreos_left
+  puts $oreos_in_box
+end
+</code></pre>
+				</section>
+
+				<section> <!-- Bad Joke Break -->
+					<h1>And now, a break for one of those programming jokes...</h1>
+				</section>
+
+				<section> <!-- A Programming Joke -->
+					<h3 class="blue left-align" style="line-height: 1.2;">
+						A programmer's partner sends them to go pick up some groceries, asking
+						them to get a loaf of bread, and, if there are eggs, to get twelve.
+					</h3>
+					<h3 class="fragment left-align" style="line-height: 1.2;">The programmer returns with twelve loaves of bread.</h3>
+				</section>
+
+
+				<section> <!-- Loops -->
+					<h2>Loops</h2>
+					<p>A loop is a <strong class="blue">set of instructions that repeats</strong><br/>until a certain condition is reached.</p>
+					<p class="fragment">The type of loop we'll be writing next is a <b class="blue">while loop</b>.</p>
+					<p><a href="https://repl.it/Fysw/2">(Loops)</a></p>
+					<aside class="notes">
+						(Read Slide) ... but we'll only be touching on while loops in this class.
+					</aside>
+				</section>
+
+					<section> <!-- Why Loops> -->
+						<h2>Why Use Loops?</h2>
+							<p>Loops are awesome at doing repetitive tasks and reducing the amount of code you need to write.</p>
+
+						<aside class="notes">
+							Loops are great at doing repetitive tasks and reducing the amount
+							of code that you need to write. Depending on what you're doing, you
+							could have hundreds of lines of code using if/then/else, or you could
+							write a simple loop statement. For example... imagine Oprah
+							was a computer.
+						</aside>
+					</section>
+
+					<section> <!-- Why Loops? -->
+						<h2>Why Use Loops?</h2>
+
+						<pre><code contenteditable class="python">print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')
+print('You get a car!')</code></pre>
+						<aside class="notes">
+							When it came time to distribute her favorite things, she could
+							print "You get a car!" 276 times for each member of her studio
+							audience.
+						</aside>
+					</section>
+
+					<section> <!-- Why Loops? -->
+						<h2>Why Use Loops?</h2>
+
+						<pre><code contenteditable class="python">number_of_cars = 276
+
+while number_of_cars > 0:
+	print('You get a car!')
+	number_of_cars = number_of_cars - 1
+</code></pre>
+<p>The <strong>while loop</strong> consists of an <strong>argument</strong>, code to be executed if the argument evaluates to true, and a counter element that will eventually cause the opening argument to become false.</p>
+						<aside class="notes">
+							... or she could rapidly loop through the entire studio audience.
+							to do the same thing.
+						</aside>
+					</section>
+
+        <section> <!-- Let's Loop! -->
+          <h2>Let's Run Some Loops!</h2>
+            <p>Go back on over to repl.it to write your own loop!
+</p>
+            <p>Go to <a href="https://repl.it/FzM2/1" target="_blank">(Try Loops)</a>.</p>
+        </section>
+
+        <section> <!-- Let's Loop! -->
+          <h2>Let's Do Some Loops!</h2>
+          <pre><code contenteditable class="ruby">papers_to_deliver = 65
+
+while papers_to_deliver > 0 
+	puts papers_to_deliver 
+	papers_to_deliver = papers_to_deliver – 1
+ end
+
+puts “Out of papers! Go home!”</code></pre>
+
+					<aside class="notes">
+						Has anyone here played the game Paperboy? Delivering newspapers to subscribers
+						while attempting to avoid death and hitting sweet ramps on bonus levels? Well,
+						this loop is for you. Does anyone want to hazard describing what would happen
+						in this chunk of code?
+					</aside>
+        </section>
+
+        <section> <!-- Loop Logic -->
+          <img style="border: none;" src="img/slide-images/loop-illustration.png" />
+					<aside class="notes">
+						Here's a diagram that runs through the logic of a loop. (Read through
+						diagram)
+					</aside>
+        </section>
+
+        <section> <!-- Beware the Infinite Loop! -->
+          <h2>Beware the Infinite Loop!</h2>
+            <p>An <strong class="blue">infinite loop</strong> is a loop that will never meet the condition to stop.<br> It will keep going until it's used up all your computer's (or server's) memory (RAM). This is bad!</p>
+            <p class="green">Example for our loop:</p>
+              <ul class="small">
+                <li>If the <code>papers_to_deliver = papers_to_deliver - 1</code> line was missing, it would keep looping because 65 is always greater than 0!</li>
+                <li>If <code>papers_to_deliver = papers_to_deliver - 1</code> was changed to <span class='code-fragment'><code>+ 1</code></span>, it would keep adding 1 to 65 forever!</li>
+              </ul>
+
+							<aside class="notes">
+								If you're not careful, it's possible to write a loop that won't ever
+								find its way to its stop condition. These are infinite loops, and they
+								are bad news bears. As we alluded to earlier, computers do exactly what you ask them.
+							</aside>
+        </section>
+
+        <section data-background="img/slide-images/trapped-in-loop.gif"> <!-- Trapped in a Loop -->
+					<aside class="notes">
+						Thusly, they'll keep going until they've used up all their (or their server's)
+						memory (RAM). Your computer's abject feeling of defeat will not be unlike this cat's.
+						Usually, this will just force you to introduce the end condition of closing your browser,
+						but an infinite loop will stop any program in its tracks.
+					</aside>
+        </section>
+
+				<section> <!-- Synthesis -->
+					<h2>Using What We've Learned</h2>
+					<p>
+						We've run through <strong class="blue">Variables,</strong> <strong>Methods</strong>, <strong class="blue">If/Else Statements</strong>,
+						and <strong class="blue">Loops</strong>... now let's try to bring them all together!
+					</p>
+					<p>
+						<strong class="blue">Our Brief: </strong> Fashion a program for a cupcake-delivering robot.
+					</p>
+				</section>
+
+			<section> <!-- Synthesis -->
+				<h2>Using What We’ve Learned</h2>
+				<p><a href="https://repl.it/FxsT/6">Snackbot Brief</a></p>
+				<p><a href="https://repl.it/FzWp/2">One Possible Answer</a></p>
+			</section>
+
+			<section> <!-- Wrap Up -->
+				<h2>Wrapping up...</h2>
+				<p>As promised, some terrible programming jokes.</p>
+			</section>
+
+			<section> <!-- Wrap Up: Jokes -->
+				<h3 class="blue left-align" style="line-height: 1.2;">
+					A computer programmer rushes his wife to the hospital where she gives birth to their child. The doctor first hands the baby to the programmer.
+				</h3>
+				<h3 class="fragment left-align" style="line-height: 1.2;">"Well?" their wife says impatiently. "Is it a boy, or is it a girl?"<h3>
+				<h3 class="fragment left-align" style="line-height: 1.2;">Smiling tearfully, the programmer replies, "Yes.</h3>
+			</section>
+
+			<section> <!-- Wrap Up: Jokes -->
+				<img src="img/slide-images/ifdog.jpg" alt="A dog being placed into a garbage can upon ambiguous request by signage." />
+			</section>
+
+			<section> <!-- Wrap Up: Jokes -->
+				<img src="img/slide-images/loopcomic.jpg" alt="A kid trying to get around writing a phrase on the chalkboard 100 times.." />
+			</section>
+
+				<section> <!-- What Next? -->
+					<h1>What now?</h1>
+				</section>
+
+				<section> <!-- What Next? -->
+					<h2>Want to Keep Going?</h2>
+					<p>"How can I learn more Ruby?"</p>
+					<ul>
+						<li>… interactively: <a href="www.codecademy.com">Codecademy</a> (Freemium)</li>
+						<li>… with more whimsy: <a href="poignant.guide/">Why’s (Poignant) Guide to Ruby</a></li>
+						<li>… in a deeper way: <a href="https://learnrubythehardway.org/book/">Learn Ruby the Hard Way</a></li>
+					</ul>
+				</section>
+
+				<section> <!-- What Next? -->
+					<h2>Want to Keep Going?</h2>
+
+					<p>“How do I get on the Ruby on Rails train?”</p>
+					<ul>
+						<li>… right away: <a href="https://www.railstutorial.org/book">Ruby on Rails Tutorial</a></li>
+						<li>… with more reinforcement: <a href="https://www.coursera.org/specializations/ruby-on-rails">Coursera Ruby on Rails Specialization</a></li>
+						<li>… and then make my app look and feel really nice: <a href="https://www.freecodecamp.com/">freeCodeCamp</a> (HTML/CSS/JavaScript)</li>
+					</ul>
+				</section>
+
+				<section> <!-- What Next? -->
+					<h2>Want to Keep Going?</h2>
+
+					<p>And then, for some inspiration (though with the stipulation that the writer, James Fend, dedicated 3 months full-time to the effort): <a href="https://www.jamesfend.com/learned-ruby-rails-12-weeks-launch-freelancify">How I Learned Enough RoR in 12 Weeks to Launch Freelancify</a></p>
+				</section>
+
+				<section>
+					<h1>Remember the following:</h1>
+				</section>
+
+				<section> <!-- REMEMBER -->
+					<img src="img/slide-images/confuseddog.jpg" style="height: 100vh;" alt="A dog is wearing goggles in a lab environment. The caption reads, 'I have no idea what I'm doing.'">
+					<aside class="notes">
+						While I hope that you feel like you've got a pretty good handle on
+						the basics and larger concepts of programming, the learning curve
+						is an intimidating bugger, and there will come a time where you
+						look at the code before you and say... 'Ehhhh—?'
+					</aside>
+				</section>
+
+				<section> <!-- REMEMBER -->
+					<img src="img/slide-images/jake-the-dog.jpg" style="height: 50vh" alt="Jake the Dog from Adventure Time, being encouraging!">
+					<blockquote>Sucking at something is the first step to being sorta good at something.</blockquote>
+					<p class="has-text-align-center"><small>&mdash; Jake the Dog</small></p>
+
+					<aside class="notes">
+						But as discouraged as you might feel at that time, remember the words of
+						another dog, and keep at it.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Any questions? <span>Comments?</span></h2>
+				</section>
+
+				<section>
+					<h1>Happy Coding!</h1>
+				</section>
+
+				<section> <!-- Closing -->
+					<h1>Intro to Coding
+						<br><small>with <strong>Ruby</strong></small>
+					</h1>
+
+					<p class="has-text-align-center" >
+						<small>Brought to you by Johnson Women in Tech (<a href="https://twitter.com/hashtag/JWiT2018" target="_blank">#JWiT2018</a>)</small>
+					</p>
+					<p class="has-text-align-center" style="line-height: 1;">
+						<small>Presented by Lauren Woodrick &amp; Austin Piëch</small><br>
+						<small>(<a href="http://www.twitter.com/loremipsam" target="_blank">@LoremIpsam</a> &amp; <a href="http://www.twitter.com/chiefpiech" target="_blank">@chiefpiech</a>)</small>
+					</p>
 				</section>
 			</div>
 		</div>
